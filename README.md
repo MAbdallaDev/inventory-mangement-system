@@ -13,7 +13,7 @@ The project is live and can be accessed at: [Inventory Management System](https:
 ![Desktop View](./assets/desktop.png)
 
 ### Mobile View
-![Mobile View](./assets/photo.jpg)
+<img src="./assets/photo.jpg" alt="phone View" style="height: 500px;" />
 
 ## Features
 
