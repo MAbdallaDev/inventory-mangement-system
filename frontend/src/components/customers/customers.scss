@@ -1,0 +1,16 @@
+.customers-page {
+   .pop-modal{
+      label {min-width: 120px;}
+   }
+   ::-webkit-scrollbar{height: 5px;}
+   ::-webkit-scrollbar-track{background-color: transparent;}
+   ::-webkit-scrollbar-thumb{
+      background-color: #0074F0;
+      border-radius: 4px;
+   }
+}
+.customer-info-page {
+   .item {
+      p{ font-size: 1.15em;}
+   }
+}

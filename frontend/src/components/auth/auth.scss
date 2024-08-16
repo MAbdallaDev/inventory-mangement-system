@@ -1,0 +1,43 @@
+ // REGISTRATION
+.regstration {
+   form {
+      width: 370px;
+      padding: 30px 24px;
+      border-radius: 8px;
+      background-color: #fff;
+      box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+      label {
+         font-weight: 500;
+      }
+      input {
+         padding: 0.4em 0.8em;
+         border-color: #ccc;
+         &:focus{box-shadow: 0 0 0 .15rem rgba(13,110,253,.25);}
+      }
+      .show-password {
+         position: absolute;
+         left: 12px;
+         top: 38px;
+         cursor: pointer;
+      }
+      .forget-password {
+         font-size: 0.9em;
+         cursor: pointer;
+      }
+      @media (max-width:576px) {
+         width: 86%;
+      }
+   }
+}
+.forget-password {
+   form {
+      width: 380px;
+      h6 {font-size: 0.98em;}
+      button[type="submit"] {
+         width: 135px;
+         display: block;
+         margin: auto;
+      }
+      
+   }
+}

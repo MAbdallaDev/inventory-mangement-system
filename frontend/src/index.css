@@ -1,0 +1,60 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Kufi+Arabic:wght@400;500;600;700&display=swap');
+* {
+   padding: 0px;
+   margin: 0px;
+   box-sizing: border-box;
+}
+a {
+   text-decoration: none;
+}
+ul {list-style: none;}
+button {font-weight: 500 !important;}
+table {
+   th {font-weight: 600;}
+}
+.form-control:focus {
+   box-shadow: 0 0 0 .15rem rgba(13,110,253,.25) !important;
+}
+body {
+   font-family: "Noto Kufi Arabic", sans-serif;
+   background-color: rgb(240 242 245 / 80%);
+   direction: rtl;
+   font-size: 16px;
+}
+/* POP MODEL */
+.pop-modal {
+   margin-top: 100px;
+}
+.fade.modal.show {padding-right: 60px !important;}
+.modal-dialog .modal-header button {
+   margin: 0px;
+}
+.modal-dialog .form-label {
+   display: inline-block;
+   min-width: fit-content;
+   font-weight: 500;
+}
+.cutomer-pop .modal-dialog .form-label ,
+.user-pop .modal-dialog .form-label {
+   min-width: 86px;
+}
+@media (max-width:699px) {
+   .fade.modal.show{
+      display: flex !important;
+      justify-content: center;
+   }
+   .modal-dialog {
+      width: 84%;
+      margin-right: 10%;
+   }
+}
+@media (max-width:992px) {
+   body {
+      font-size: 14px;
+   }
+}
+@media (max-width:576px) {
+   body {
+      font-size: 12px;
+   }
+}

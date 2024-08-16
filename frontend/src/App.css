@@ -1,0 +1,4 @@
+.App main {
+  min-height: calc(100vh - 60px);
+  transition: all ease-in-out 0.3s;
+}

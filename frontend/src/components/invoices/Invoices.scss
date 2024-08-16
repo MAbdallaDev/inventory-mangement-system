@@ -1,0 +1,110 @@
+@mixin scrollbar($dimension){
+   ::-webkit-scrollbar {
+      width: $dimension; // Width of the scrollbar
+      height: $dimension; // Height of the scrollbar (for horizontal scrollbars)
+   }
+   ::-webkit-scrollbar-track {
+      background: transparent; // Color of the scrollbar track
+   }
+   ::-webkit-scrollbar-thumb {
+      background: var(--bs-blue); // Color of the scrollbar handle
+      border-radius: 4px;
+   }
+   ::-webkit-scrollbar-thumb:hover {
+      background: #ccc; // Color of the scrollbar handle on hover
+   }
+}
+
+.invoices {
+   @include scrollbar(5px);
+   .invoice-card {
+      background-color: #fff;
+      box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+      .head {background-color: var(--bs-gray-200);}
+   }
+   .invoice-info-form {
+      label {min-width: 115px;}
+   }
+   .filter {
+      background-color: #fff;
+      .reset-btn{
+         cursor: pointer;
+         font-size: 0.94em;
+      }
+      form {
+         width:100%;
+         @media (min-width:425px) {
+            width: 280px;
+         }
+         .date-picker { cursor: pointer;}
+      }
+      .search-btn {
+         border: none;
+         outline: none;
+         background-color: transparent;
+         position: absolute;
+         left: 0;
+         top: 6px;
+         color: var(--bs-blue);
+         svg {
+            width: 26px;
+            height: 26px;
+            padding: 4px;
+         }
+      }
+   }
+   .customer-info-form {
+      form {
+         label {min-width: 94px;}
+         .new-cutomer-btn{
+            min-width: 115px;
+            font-size: 0.9em;
+            border: none;
+            background-color: transparent;
+            color: var(--bs-blue);
+            cursor: pointer;
+         }
+      }
+      .react-autosuggest__suggestions-container {
+         @media (min-width:768px) and  (max-width:1200px){
+            width: 240px;
+         }
+      }
+   }
+   .order-details-form { 
+      .delete-wrapper {
+         min-width: 42px;
+         .delete-btn {
+            color: #dc3545;
+            font-size: 1.3em;
+            cursor: pointer;
+         }
+      }
+      .discount input { max-width: 140px}
+      .message{
+         @media (min-width:992px) {
+            font-size: 0.65em;
+         }
+      }
+   }
+   .create-invoice-btn {width: 200px;}
+   .react-autosuggest__suggestions-container {
+      margin-top: 8px;
+      width: 200px;
+      max-height: 120px;
+      border: none;
+   }
+   .create-invoice {
+      @include scrollbar(5px);
+   }
+}
+.invoice-details-page {
+   .order-details-items{font-size: 1.1em;}
+   .description{
+      @media (min-width:768px) {
+         width: 400px;
+      }
+   }
+   @include scrollbar(5px);
+}
+.invoice-table {@include scrollbar(5px);}

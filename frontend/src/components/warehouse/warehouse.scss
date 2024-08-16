@@ -1,0 +1,96 @@
+@mixin scrollbar($demiension){
+   ::-webkit-scrollbar{
+      width: $demiension;
+      height: $demiension;
+   }
+   ::-webkit-scrollbar-track{background-color: transparent;}
+   ::-webkit-scrollbar-thumb{
+      background-color: var(--bs-primary);
+      border-radius: 6px;
+   }
+}
+
+.all-products-page { @include scrollbar(5px);}
+.product-info-page {
+   h5 {
+      font-size: 1.2em;
+      min-width: 100px;
+      width: fit-content;
+      margin-left: 2px;
+      @media (min-width:576px) { min-width: 118px;}
+   }
+   p {
+      font-size: 1.15em;
+   }
+   textarea { 
+      @media (min-width:768px) {
+         width: 420px;
+      }
+   }
+   @include scrollbar(5px);
+}
+.add-product-form {
+   width: 95% !important;
+   @media (min-width:991px) {
+      width: 75% !important;
+   }
+   .form-group {
+      padding: 10px 0px;
+      position: relative;
+      label {
+         min-width: 86px;
+         @media (min-width:768px) {
+            min-width: 100px;
+         }
+      }
+      input {
+         max-width: 100%;
+         padding: 6px 12px;
+         border-radius: 4px;
+         border: 1px solid #ccc;
+         outline: none;
+      }
+      input[type="number"] {
+         max-width: 180px;
+      }
+      textarea {max-width: 400px;}
+      select {
+         width: 180px;
+         border: 1px solid #ccc;
+         border-radius: 6px;
+         padding: 2px 10px;
+         outline: none;
+      }
+      select.custom-dropdown-menu {
+         max-height: 150px; /* Adjust the height as needed */
+         overflow-y: auto !important;
+      }
+   }
+   button {
+      font-weight: 600;
+   }
+   button.submit-btn {
+      display: block;
+      margin: auto;
+      min-width: 110px;
+      margin-top: 30px;
+   }
+   .color-qty-wrapper {
+      gap: 12px;
+      @media (min-width:768px) {
+         gap: 75px;
+      }
+      .color-qty {
+         display: flex;
+         align-items: center;
+         @media (max-width:700px) {
+            justify-content:space-between;
+         }
+      }
+   }
+   .delete-btn {
+      color: #dc3545;
+      font-size: 1.3em;
+   }
+   @include scrollbar(5px);
+}
